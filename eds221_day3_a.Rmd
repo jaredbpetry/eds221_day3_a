@@ -1,0 +1,12 @@
+---
+title: "day 3 morning session"
+author: "Jared Petry"
+date: "2022-08-10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+yee lets learn for loops!!
