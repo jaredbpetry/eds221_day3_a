@@ -9,4 +9,99 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+Library stuff
+
+```{r}
+library(tidyverse)
+```
+
+
+
 yee lets learn for loops!!
+
+```{r}
+surf_loc <- c("sb", "ventura", "jalama")
+surf_swell <- c("west", "south", "combo")
+
+```
+
+
+
+```{r}
+swell1 <- "south" 
+
+if (swell1 == "south") {
+  print("malibu")
+}
+
+```
+
+
+
+### IF STATEMENTS
+```{r}
+burrito <- 2.4
+
+if (burrito > 2) {
+  print("I love burritos")
+}
+  
+```
+
+```{r}
+
+my_ships <- c("millenium falcon", "x-wing", "tie-fighter", "death star")
+
+#-----look for anything within a vector of string elements 
+#---- try looking for "r" in the above stored vector
+str_detect(my_ships, pattern = "r")
+```
+
+use built in star wars data 
+
+```{r}
+#-----this is making a new subset of the data with only characters from tatooine 
+
+tatooine_characters <- starwars |> 
+  filter(homeworld == "Tatooine")
+
+#----- use %in% operator to check for multiple positive matches 
+#filter(homeworld %in% c("tatooine", "naboo", "endor")) is saying: does the value in the homeworld variable contain any of these values in this vector ... this is great for code efficiency 
+
+tatooine_endor_naboo <- starwars |> 
+  filter(homeworld %in% c("Tatooine", "Naboo", "Endor"))
+```
+
+```{r}
+#doesn't work sorry
+phrase <- "I Love burritos" 
+if (str_detect(pattern = "love")) {
+  print("I am a burro fan")
+}
+```
+
+```{r}
+pika <- 89.1
+
+if (pika > 60) {
+  print("megapika")
+} else {
+  print("normal pika")
+}
+```
+
+
+## Now some else if statements
+
+```{r}
+marmot <- 2.8
+
+if (marmot < 0.5) {
+  print("this is a small marmot")
+} else if (marmot >= 0.5 & marmot < 3) {
+  print("this is a medium marmot") 
+} else {
+  print("huge marmot guy")
+}
+```
+
